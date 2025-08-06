@@ -8,7 +8,7 @@ const review = reactive({
   content: '',
   rating: null
 })
-
+  
 const onSubmit = () => {
   if (review.name === '' || review.content === '' || review.rating === null) {
     alert('Review is incomplete. Please fill out every field.')
