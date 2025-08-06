@@ -4,6 +4,7 @@ import productDisplay from '@/components/productDisplay.vue';
 
 const cart = ref(0)
 const premium = ref(true)
+
 </script>
 
 <template>

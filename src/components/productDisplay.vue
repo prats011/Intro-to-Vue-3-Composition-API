@@ -79,7 +79,7 @@ const shipping = computed(() => {
                     </li>
                 </ul>
                 <button class="button" :class="{ disabledButton: !inStock }" @click="addToCart" :disabled="!inStock">
-                    Add to cart
+                    Add to cart. 
                 </button>
             </div>
         </div>
