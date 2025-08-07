@@ -1,7 +1,10 @@
 <script setup>
 import { computed, ref } from 'vue'
+import { defineEmits } from 'vue'
 import socksGreenImage from '@/assets/images/socks_green.jpeg'
 import socksBlueImage from '@/assets/images/socks_blue.jpeg'
+
+const emit = defineEmits(['add-to-cart'])
 
 const props = defineProps({
   premium: {
@@ -20,7 +23,9 @@ const inventory = ref(100)
 const onSale = ref(true)
 
 
-const addToCart = () => cart.value += 1
+const addToCart = () => {
+  emit('add-to-cart', variants.value[selectedVariant.value].id)
+}
 
 
 const title = computed(() => {
